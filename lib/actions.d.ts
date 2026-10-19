@@ -1,0 +1,10 @@
+import { Context, Logger } from 'koishi';
+import { SponsorActionPayload, SponsorActionResult, SponsorConfig, SponsorQrActionPayload } from './types';
+export declare function parseAmountToCents(value: unknown): number;
+export declare function saveSponsor(ctx: Context, payload: SponsorActionPayload, operator: string): Promise<SponsorActionResult>;
+export declare function saveQr(ctx: Context, payload: SponsorQrActionPayload, config: SponsorConfig, logger: Logger): Promise<SponsorActionResult>;
+export declare function ensureBuiltinQr(ctx: Context, config: SponsorConfig, logger: Logger): Promise<void>;
+export declare function deleteSponsor(ctx: Context, id: number): Promise<SponsorActionResult>;
+export declare function deleteQr(ctx: Context, id: number): Promise<SponsorActionResult>;
+export declare function toggleSponsor(ctx: Context, id: number, enabled: boolean): Promise<SponsorActionResult>;
+export declare function toggleQr(ctx: Context, id: number, enabled: boolean): Promise<SponsorActionResult>;

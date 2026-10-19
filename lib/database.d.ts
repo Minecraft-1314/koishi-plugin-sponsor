@@ -1,0 +1,15 @@
+import { Context } from 'koishi';
+import { SponsorListFilter, SponsorQrRecord, SponsorRecord, SponsorSummary } from './types';
+export declare function resolvePageSize(override?: number, fallback?: number): number;
+export declare function listQrCodes(ctx: Context, includeDisabled?: boolean): Promise<SponsorQrRecord[]>;
+export declare function getQrCode(ctx: Context, id: number): Promise<SponsorQrRecord | undefined>;
+export declare function countQrCodes(ctx: Context): Promise<number>;
+export declare function listSponsors(ctx: Context, filter: SponsorListFilter, limit: number): Promise<SponsorRecord[]>;
+export declare function countSponsors(ctx: Context, filter: SponsorListFilter): Promise<number>;
+export declare function getLeaderboard(ctx: Context, limit: number): Promise<SponsorRecord[]>;
+export declare function summarizeSponsors(ctx: Context): Promise<SponsorSummary>;
+export declare function getSponsor(ctx: Context, id: number): Promise<SponsorRecord | undefined>;
+export declare function removeSponsor(ctx: Context, id: number): Promise<boolean>;
+export declare function removeQrCode(ctx: Context, id: number): Promise<boolean>;
+export declare function setSponsorEnabled(ctx: Context, id: number, enabled: boolean): Promise<boolean>;
+export declare function setQrEnabled(ctx: Context, id: number, enabled: boolean): Promise<boolean>;

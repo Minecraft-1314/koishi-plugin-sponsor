@@ -1,0 +1,58 @@
+{
+  "name": "koishi-plugin-sponsor",
+  "description": "Koishi 赞助插件，支持展示赞助二维码和赞助排行榜，管理员可在控制台维护二维码与赞助记录",
+  "version": "0.0.3",
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "files": [
+    "lib",
+    "dist",
+    "assets"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "npm run build:backend && npm run build:client",
+    "build:backend": "tsc",
+    "build:client": "vite build",
+    "dev": "tsc -w",
+    "dev:client": "vite build --watch",
+    "clean": "rimraf lib dist"
+  },
+  "keywords": [
+    "chatbot",
+    "koishi",
+    "plugin",
+    "sponsor",
+    "donation",
+    "qr",
+    "leaderboard",
+    "赞助",
+    "捐赠",
+    "二维码",
+    "排行榜",
+    "控制台"
+  ],
+  "devDependencies": {
+    "@koishijs/client": "^5.30.11",
+    "@koishijs/console": "^5.30.11",
+    "@vitejs/plugin-vue": "^5.2.1",
+    "rimraf": "^5.0.5",
+    "typescript": "^5.3.3",
+    "vite": "^5.4.21",
+    "vue": "^3.5.13"
+  },
+  "peerDependencies": {
+    "koishi": "^4.18.7"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Minecraft-1314/koishi-plugin-sponsor.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Minecraft-1314/koishi-plugin-sponsor/issues"
+  },
+  "homepage": "https://github.com/Minecraft-1314/koishi-plugin-sponsor#readme",
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
